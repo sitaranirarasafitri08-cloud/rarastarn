@@ -1,1 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Pelajar Komprehensif</title>
+    <!-- Memuat Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Memuat Font Awesome (Ikon) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* Warna Biru Muda Cerah Kustom dan Abu-Abu Muda */
+        :root {
+            --bs-light-gray-blue: #F0F4F7; /* Background Utama Halaman (Biru Muda + Abu-abu) */
+            --bs-light-blue: #E1F5FE; /* Accent Light Blue (Untuk Footer/Border) */
+            --bs-primary-blue: #4FC3F7; /* Aksen Biru Primer (Header) */
+            --bs-dark-blue: #0288D1; /* Aksen Biru Tua untuk Teks/Ikon */
+        }
 
+        body {
+            background-color: var(--bs-light-gray-blue); /* Background baru: Abu-abu Muda Kebiruan */
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+
+        /* Styling untuk Card Biodata */
+        .bio-card {
+            border: 1px solid rgba(79, 195, 247, 0.5); 
+            border-radius: 1.5rem; /* Sudut lebih melengkung */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Bayangan lebih jelas */
+        }
+
+        /* Header dengan warna Biru Muda Primer */
+        .card-header-custom {
+            background-color: var(--bs-primary-blue);
+            color: white;
+            border-bottom: none;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+
+        /* Gaya untuk Foto Profil Lingkaran */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 6px solid white; /* Border lebih tebal */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            margin-top: -75px; 
+            z-index: 10;
+            position: relative;
+        }
+
+        /* Gaya untuk ikon */
+        .icon-accent {
+            color: var(--bs-dark-blue);
+            width: 20px;
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--bs-dark-blue);
+        }
+
+        /* Membuat layout card responsif */
+        @media (max-width: 768px) {
+            .profile-img {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CONTAINER UTAMA -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+                
+                <!-- CARD UTAMA BIODATA -->
+                <div class="card bio-card bg-white p-0">
+                    
+                    <!-- HEADER / BANNER BIRU MUDA CERAH -->
+                    <div class="card-header-custom py-4 text-center">
+                        <h1 class="h3 mb-1">PROFIL PELAJAR</h1>
+                        <p class="lead mb-0" style="font-size: 1rem;">Portofolio Digital Sederhana & Komprehensif</p>
+                    </div>
+
+                    <!-- FOTO PROFIL (Tengah) -->
+                    <div class="text-center">
+                        <!-- Menggunakan Placeholder Image -->
+                        <img src="https://placehold.co/150x150/0288D1/FFFFFF?text=RP" 
+                             alt="Foto Profil" class="rounded-circle profile-img"
+                             onerror="this.onerror=null;this.src='https://placehold.co/150x150/0288D1/FFFFFF?text=FOTO';"
+                        >
+                        <h2 class="h4 mt-3 mb-0 text-dark-blue">SITARANI RARA SAFITRI</h2>
+                        <p class="text-secondary mb-4">Siswa SMA NEGRI 10 GARUT | Perminatan MAatematika,Kimia,Ekonomi,dan INFORMATIKA</p>
+                    </div>
+
+                    <!-- BODY KONTEN -->
+                    <div class="card-body pt-0 px-md-5 px-3">
+                        
+                        <!-- SECTION 1: TENTANG SAYA (FULL WIDTH) -->
+                        <div class="mb-5 p-3 border rounded-3 bg-light-gray-blue">
+                             <h3 class="h5 mb-3 text-dark-blue">
+                                <i class="fas fa-book-reader icon-accent me-2"></i> TENTANG SAYA
+                            </h3>
+                            <p class="text-secondary mb-0">
+                                Saya adalah pelajar yang sangat antusias dan bersemangat di bidang Matematika,Ekonomi,Informatika,dan Ekonomi. Saya memiliki minat besar dalam pemecahan masalah (problem solving) dan selalu berusaha mengaplikasikan ilmu yang didapat di sekolah ke dalam proyek nyata. Tujuan saya adalah lulus dengan keahlian praktis yang siap untuk dunia kerja digital.
+                            </p>
+                        </div>
+                        
+                        <div class="row">
+                            
+                            <!-- SECTION 2A: DATA DIRI (KOLOM KIRI) -->
+                            <div class="col-md-5 border-end py-4">
+                                <h3 class="h5 mb-3 text-dark-blue">
+                                    <i class="fas fa-id-card icon-accent me-2"></i> DATA DIRI & KONTAK
+                                </h3>
+                                
+                                <ul class="list-unstyled small">
+                                    <li class="mb-2">
+                                        <span class="fw-bold d-block">Tempat/Tgl Lahir:</span>
+                                        Garut, 17 Desember 2007
+                                    </li>
+                                    <li class="mb-2">
+                                        <span class="fw-bold d-block">Alamat:</span>
+                                        kp. Sarleuleus Rw.15 Rt.01 , Leuwigoong
+                                    </li>
+                                    <li class="mb-2">
+                                        <span class="fw-bold d-block">Email:</span>
+                                        sitaranirs4@gmail.com
+                                    </li>
+                                    <li class="mb-2">
+                                        <span class="fw-bold d-block">Telepon:</span>
+                                        +62 858-2407-6732
+                                    </li>
+                                </ul>
+
+                                <hr class="my-3 d-md-none">
+                            </div>
+
+                            <!-- SECTION 2B: PENDIDIKAN (KOLOM KANAN) -->
+                            <div class="col-md-7 py-4">
+                                <h3 class="h5 mb-3 text-dark-blue">
+                                    <i class="fas fa-graduation-cap icon-accent me-2"></i> RIWAYAT PENDIDIKAN
+                                </h3>
+                                
+                                <!-- Riwayat Pendidikan menggunakan list-group Bootstrap (Varian Tampilan) -->
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start border-0 px-0">
+                                        <div>
+                                            <div class="fw-bold text-dark-blue">SMA NEGERI 10 GARUT (2023 - Sekarang)</div>
+                                            <span class="text-secondary small">Perminatan MATEMATIKA,KIMIA,EKONOMI,PKWU,DAN INFORMATIKA</span>
+                                        </div>
+                                        <span class="badge rounded-pill bg-primary-blue text-white">Aktif</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start border-0 px-0">
+                                        <div>
+                                            <div class="fw-bold">SMPN 01 LEUWIGOONG (2019 - 2023)</div>
+                                            <span class="text-secondary small">Nilai Rata-rata 8.8</span>
+                                        </div>
+                                        <span class="badge rounded-pill bg-secondary">Lulus</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start border-0 px-0">
+                                        <div>
+                                            <div class="fw-bold">SDN 4 LEUWIGOONG (2013 - 2019)</div>
+                                            <span class="text-secondary small">Fokus pada Ilmu Pengetahuan Alam</span>
+                                        </div>
+                                        <span class="badge rounded-pill bg-secondary">Lulus</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 3: KETERAMPILAN (FULL WIDTH) -->
+                        <h3 class="h5 mb-3 text-dark-blue border-top pt-4 mt-4">
+                            <i class="fas fa-bolt icon-accent me-2"></i> KETERAMPILAN 
+                        </h3>
+
+                        <!-- Progress Bar Bootstrap (Varian Tampilan) -->
+                        <p class="mb-1 small"> MENGHITUG </p>
+                        <div class="progress mb-3" style="height: 12px;">
+                            <div class="progress-bar bg-dark-blue" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                        <p class="mb-1 small">MENGHAPAL</p>
+                        <div class="progress mb-3" style="height: 12px;">
+                            <div class="progress-bar bg-primary-blue" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                        </div>
+                        <p class="mb-1 small">MENGGAMBAR</p>
+                        <div class="progress mb-3" style="height: 12px;">
+                            <div class="progress-bar bg-dark-blue" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                        </div>
+
+
+                        <!-- SECTION 4: ORGANISASI & PROYEK (FULL WIDTH - Pill Navigation for Variation) -->
+                        <h3 class="h5 mb-3 text-dark-blue border-top pt-4 mt-4">
+                            <i class="fas fa-laptop-code icon-accent me-2"></i> PENGALAMAN & HOBI
+                        </h3>
+
+                        <!-- Navigasi Pills untuk variasi tampilan -->
+                        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active rounded-pill me-2" id="pills-org-tab" data-bs-toggle="pill" data-bs-target="#pills-org" type="button" role="tab">Organisasi</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link rounded-pill" id="pills-proj-tab" data-bs-toggle="pill" data-bs-target="#pills-proj" type="button" role="tab">Proyek</button>
+                            </li>
+                        </ul>
+
+                        <!-- Konten Pills -->
+                        <div class="tab-content" id="pills-tabContent">
+                            
+                            <!-- Tab Organisasi -->
+                            <div class="tab-pane fade show active" id="pills-org" role="tabpanel">
+                                <ul class="list-group list-group-flush border rounded-3">
+                                    <li class="list-group-item">
+                                        <div class="fw-bold text-dark-blue">OrganiSasi Intra Sekolah (OSIS)(2025 - Sekarang)</div>
+                                        <p class="mb-1 small text-muted">Sekbid 8  REPSESI,APRESIASI,DAN KREASI SENI </p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="fw-bold">Palang Merah Remaja (PMR) (2020-20023)</div>
+                                        <p class="mb-1 small text-muted">Sebagai anggota</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Tab Proyek -->
+                            <div class="tab-pane fade" id="pills-proj" role="tabpanel">
+                                <ul class="list-group list-group-flush border rounded-3">
+                                    <li class="list-group-item">
+                                        <div class="fw-bold text-dark-blue">FUTSAL (2017-2023)</div>
+                                        <p class="mb-1 small text-muted">latihan 3-4 kali dalam semnggu </p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="fw-bold">LARI </div>
+                                        <p class="mb-1 small text-muted">dari 8 km - 10 km  dalam seminggu 2 hari .</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    
+                    <!-- FOOTER KARTU (Sosial Media) -->
+                    <div class="card-footer text-center bg-light-blue p-3 border-0" style="border-bottom-left-radius: 1.5rem; border-bottom-right-radius: 1.5rem;">
+                        <small class="text-muted d-block mb-2">Terhubung dengan Saya di Media Sosial:</small>
+                        <a href="#" class="text-dark-blue mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-dark-blue mx-2"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="text-dark-blue mx-2"><i class="fas fa-envelope fa-lg"></i></a>
+                    </div>
+
+                </div>
+                <!-- AKHIR CARD UTAMA -->
+
+            </div>
+        </div>
+    </div>
+    <!-- AKHIR CONTAINER UTAMA -->
+
+    <!-- Memuat Bootstrap JS Bundle (Penting untuk Pills/Tabs) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
